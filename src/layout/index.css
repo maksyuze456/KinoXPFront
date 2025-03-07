@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Be Vietnam Pro;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+h1, h2,h3 {
+    margin: 0;
+}
+.page {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 1%;
+    display: grid;
+    gap: 10px;
+    grid-template-areas:    "header header"
+                            "nav content"
+                            "footer footer";
+    grid-template-columns: fit-content(100%) 1fr;
+    grid-template-rows: 2.5% 1fr 2.5%;
+
+}
+.nav {
+    background-color: white;
+    grid-area: nav;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#logo {
+    margin: 20px;
+}
+
+.section {
+    background-color: #FFFFFF;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+}
+.section img {
+    width: 20px;
+    height: 20px;
+}
+.section h3{
+    font-weight: 500;
+    font-size: 16px;
+}
+.nav a{
+    border-left: solid 3px #FFFFFF;
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+    color: black;
+    padding: 20px;
+    transition: 0.5s;
+}
+.nav a:hover{
+    border-color: #ff0000;
+}
+.main-content{
+    background-color: white;
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1%;
+}
+.main-buttons{
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 5px;
+    border-radius: 15px;
+    width: fit-content;
+    overflow: hidden;
+}
+.main-buttons button {
+    border-style: none;
+    border-bottom: 2px solid white;
+    background-color: white;
+    font-family: "Be Vietnam Pro";
+    padding: 5px 5px 8px;
+    transition: 0.5s;
+
+}
+.main-buttons button:hover{
+    border-color: #ff0000;
+    cursor: pointer;
+
+}
+.dynamic-content {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: "left right";
+    grid-template-columns: 0.5fr 1fr;
+}
