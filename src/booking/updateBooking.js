@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 const bookingId = urlParams.get("id");
-fetchBookingById();
+fetchBookingById(bookingId);
 
-async function fetchBookingById(){
+async function fetchBookingById(bookingId){
     try {
         let response = await fetch(`http://localhost:8080/booking/${bookingId}`);
         let booking = await response.json();

@@ -3,11 +3,16 @@
     height:2.3rem;
     cursor: pointer;
 }
+.delete-button {
+    width: 2.3rem;
+    height:2.3rem;
+    cursor: pointer;
+}
 
 
 .table-buttons {
     display: flex;
-    
+
 }
 
 .container {
@@ -30,11 +35,22 @@ tbody td {
     max-width: 120px;
     overflow: hidden;
 }
+tbody td:last-child{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
 thead td{
     padding: 15px;
     font-weight: bold;
     font-size: 14px;
 }
+thead td:last-child{
+    display: flex;
+
+    padding-left: 50px;
+}
+
 
 tr:hover {
     background-color: #F9F9F9;

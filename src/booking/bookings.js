@@ -27,8 +27,9 @@ function dynamicData() {
             <td>${booking.show}</td>
             <td class="table-buttons">
                 <img class="edit-button" data-id="${booking.id}" src="/images/edit.png" alt="edit">
+                <img class="delete-button" data-id="${booking.id}" src="/images/trash-bin.png" alt="edit">
             </td>
-        </tr>    
+        </tr>
         `;
         document.querySelector("tbody").insertAdjacentHTML('beforeend', markup)
     })
@@ -39,6 +40,31 @@ function dynamicData() {
             window.location.href = `/src/booking/updateBooking.html?id=${bookingId}`;
         })
     })
+
+    document.querySelectorAll(".delete-button").forEach(img => {
+        img.addEventListener("click", function() {
+            const bookingId = this.getAttribute("data-id");
+            fetchDeleteById(bookingId);
+        })
+    })
+
+}
+
+async function fetchDeleteById(bookingId) {
+    try {
+        let response = await fetch(`http://localhost:8080/booking/${bookingId}`, {
+            method: "DELETE"
+        });
+        if(response.ok) {
+           alert("Booking has been deleted!"); 
+           window.location.href = `/src/booking/bookings.html`;
+        } else {
+            
+        }
+
+    } catch(err) {
+        console.log("Error: " + err);
+    }
 
 }
 
