@@ -2,13 +2,31 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Film Liste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alle Film</title>
+    <link rel="stylesheet" href="SeAllFilm.css">
 </head>
 <body>
-<h1>Film Liste</h1>
-<div id="film-container"></div>
+<div class="page">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="SeAllFilm.html">Alle Film</a>
+        <a href="AddFilm.html">Tilføj Film</a>
+        <a href="FilmId.html">Søg Film</a>
+    </nav>
 
-<!-- Link til din eksterne JavaScript-fil -->
+    <!-- Search bar and Add button -->
+    <div class="top-bar">
+        <button id="create-film">+ Opret ny Film</button>
+        <input type="text" id="search-film" placeholder="Søg efter film...">
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h1>Film Liste</h1>
+        <div id="film-container"></div>
+    </div>
+</div>
 <script src="SeAllFilm.js"></script>
 </body>
 </html>
