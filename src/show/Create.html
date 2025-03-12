@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj ny forestilling</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="create.js"></script>
+</head>
+<body>
+
+<h1>Tilføj ny forestilling</h1>
+
+<form id="showForm">
+    <label for="date">Show Date:</label>
+    <input type="date" id="date" name="date" required>
+    <br><br>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required>
+    <br><br>
+
+    <button id="btnCreate" type="button">Opret ny forestilling</button>
+    <button id="btnBack" type="button">Tilbage</button>
+</form>
+
+<!-- Bekræftelsesmeddelelse -->
+<div id="confirmationMessage" class="hidden">
+    ✅ Forestillingen er blevet oprettet!
+</div>
+
+</body>
+</html>

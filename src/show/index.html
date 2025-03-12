@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forestillinger Administration</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Sidebar Menu -->
+<aside class="sidebar">
+    <div class="logo">LOGO</div>
+    <nav>
+        <ul>
+            <li><a href="#">🏠 Dashboard</a></li>
+            <li><a href="#">🎬 Film Administration</a>
+                <ul>
+                    <li>Se og administrer film</li>
+                    <li>Opret ny film</li>
+                </ul>
+            </li>
+            <li><a href="#">🎭 Forestillings Administration</a>
+                <ul>
+                    <li>Se og administrer forestillinger</li>
+                    <li>Opret ny forestilling</li>
+                </ul>
+            </li>
+            <li><a href="#">📅 Booking</a>
+                <ul>
+                    <li>Se og administrer bookinger</li>
+                    <li>Opret ny booking</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="content">
+    <header>
+        <h1>Forestillinger Administration</h1>
+        <button id="btnAddShow">+ Opret ny forestilling</button>
+        <div class="user">
+            <span>👤</span>
+            <button class="logout-btn">Log ud</button>
+        </div>
+    </header>
+
+    <!-- Tabel over forestillinger -->
+    <table>
+        <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Dato</th>
+            <th>Tid</th>
+            <th>Bookinger</th>
+            <th>Handling</th>
+        </tr>
+        </thead>
+        <tbody id="showList">
+        <!-- Shows vil blive tilføjet her med JavaScript -->
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>
