@@ -1,0 +1,223 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* --------- Sidebar Styling --------- */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-right: 3px solid #dc3545;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #dc3545;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    padding: 12px 0;
+    font-size: 16px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.sidebar nav ul li a:hover {
+    color: #dc3545;
+}
+
+/* --------- Main Content Styling --------- */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #dc3545;
+}
+
+header button {
+    background: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: #a71d2a;
+}
+
+.logout-btn {
+    background: #333;
+}
+
+/* --------- Tabel Styling --------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #dc3545;
+    color: white;
+}
+
+/* Ikoner for handlinger */
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.action-btn.slet {
+    color: #dc3545;
+}
+
+.action-btn.slet:hover {
+    color: #a71d2a;
+}
+
+.action-btn.rediger {
+    color: #007bff;
+}
+
+.action-btn.rediger:hover {
+    color: #0056b3;
+}
+
+/* --------- Formular Styling --------- */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #dc3545;
+}
+
+input[type="date"], input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #a71d2a;
+}
+
+/* --------- Responsivt Design --------- */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 210px;
+    }
+}
+.hidden {
+    display: none;
+}
+
+#confirmationMessage {
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* --------- Opret ny forestilling-knap (Administrationsside) --------- */
+#btnAddShow {
+    font-size: 14px;  /* Mindre tekst */
+    padding: 6px 12px;  /* Reducer størrelse */
+    width: auto;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Afstand mellem ikon og tekst */
+    font-weight: bold;
+}
+
+
+#btnAddShow:hover {
+    background: #a71d2a;
+}
+
+/* Styling for Show ID tekst */
+.show-id {
+    font-size: 16px;
+    font-weight: bold;
+    color: #dc3545;
+    background: #f8f8f8;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+

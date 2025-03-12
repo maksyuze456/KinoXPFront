@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Opdater forestilling</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="UpdateShow.js"></script>
+</head>
+<body>
+
+<h1>Opdater forestilling</h1>
+
+<form id="updateForm">
+  <label for="showID">Forestillings ID:</label>
+  <p id="showID"></p>
+
+  <br><br>
+
+  <label for="date">Ny Dato:</label>
+  <input type="date" id="date" name="date" required>
+  <br><br>
+
+  <label for="time">Ny Tid:</label>
+  <input type="time" id="time" name="time" required>
+  <br><br>
+
+  <button id="btnUpdate" type="button">Opdater forestilling</button>
+  <button id="btnBack" type="button">Tilbage</button>
+</form>
+
+<!-- Bekræftelsesmeddelelse -->
+<div id="confirmationMessage" class="hidden">
+  ✅ Forestillingen er blevet opdateret!
+</div>
+
+</body>
+</html>
