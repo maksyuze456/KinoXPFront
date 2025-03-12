@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Film Oversigt</title>
+    <link rel="stylesheet" href="FullFilm.css">
+</head>
+<body>
+
+<h1>Film Oversigt</h1>
+
+
+<div class="create-section">
+    <button onclick="location.href='AddFilm.html'">Opret ny Film</button>
+</div>
+
+
+<div class="search-section">
+    <input type="text" id="searchInput" placeholder="Indtast søgeord...">
+    <button onclick="filterFilms()">Søg</button>
+</div>
+
+
+<div id="filmContainer" class="film-container">
+
+    <div class="film-card">
+        <img src="example.jpg" alt="Film Titel">
+        <h2>Film Titel</h2>
+        <p>Beskrivelse af filmen...</p>
+        <button class="edit-btn">Rediger</button>
+        <button class="delete-btn">Slet</button>
+    </div>
+
+
+</div>
+
+
+<script src="FullFilm.js"></script>
+
+</body>
+</html>

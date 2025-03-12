@@ -1,0 +1,66 @@
+/* Generel styling til formular-siden */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* Formular-sektion (EditFilm) */
+.form-section {
+    margin-top: 2rem;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-row button {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.btn-row button[type="submit"] {
+    background-color: #007ACC;
+}
+
+.btn-row button[type="submit"]:hover {
+    background-color: #005FA3;
+}
+
+.btn-row button[type="button"] {
+    background-color: #dc3545;
+}
+
+.btn-row button[type="button"]:hover {
+    background-color: #b52a37;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <title>Opret ny Film</title>
+  <link rel="stylesheet" href="ADDFilm.css">
+
+</head>
+<body>
+
+<h1>Opret ny Film</h1>
+
+<section class="form-section">
+  <form id="addFilmForm">
+    <label for="newTitle">Titel:</label>
+    <input type="text" id="newTitle" required>
+
+    <label for="newDescription">Beskrivelse:</label>
+    <input type="text" id="newDescription">
+
+    <label for="newDuration">Varighed (minutter):</label>
+    <input type="number" id="newDuration" required>
+
+    <label for="newGenre">Genre:</label>
+    <input type="text" id="newGenre">
+
+    <label for="newReleaseDate">Udgivelsesdato:</label>
+    <input type="date" id="newReleaseDate" required>
+
+    <div class="btn-row">
+      <button type="submit">Tilføj Film</button>
+      <button type="button" onclick="cancel()">Fortryd</button>
+    </div>
+  </form>
+</section>
+
+
+<script src="FullFilm.js"></script>
+</body>
+</html>

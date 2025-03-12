@@ -1,0 +1,147 @@
+/* Generel styling */
+body {
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: #f0f4f8;
+    padding: 2rem;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #2d3748;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Opret ny film-knap (øverst til venstre) */
+.create-section {
+    float: left;
+    margin-bottom: 1rem;
+}
+
+.create-section button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: #8f958f;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.create-section button:hover {
+    background: #666866;
+    transform: translateY(-2px);
+}
+
+/* Søgefelt (øverst til højre) */
+.search-section {
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.search-section input {
+    padding: 0.6rem;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s;
+}
+
+.search-section input:focus {
+    border-color: #d00000;
+    outline: none;
+}
+
+.search-section button {
+    padding: 0.6rem 1.2rem;
+    margin-left: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background: #d00000;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.search-section button:hover {
+    background: #005fa3;
+    transform: translateY(-2px);
+}
+
+/* Container til film-kort */
+.film-container {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Selve film-kortet */
+.film-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    padding: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.film-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.film-card h2 {
+    margin: 0.8rem 0 0.4rem;
+    font-size: 1.4rem;
+    color: #2d3748;
+}
+
+.film-card p {
+    margin: 0.4rem 0;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+/* Knapper i filmkort */
+.film-card button {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.film-card button.edit-btn {
+    background: #073a6e;
+}
+
+.film-card button.edit-btn:hover {
+    background: #002244;
+    transform: scale(1.05);
+}
+
+.film-card button.delete-btn {
+    background: #d00000;
+}
+
+.film-card button.delete-btn:hover {
+    background: #a00000;
+    transform: scale(1.05);
+}
