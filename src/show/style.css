@@ -1,172 +1,175 @@
-/* Reset styles */
+/* 🎨 Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-/* --------- Sidebar Styling --------- */
+/* 🌑 Global Dark Theme */
+body {
+    background-color: #111;  /* Sort baggrund */
+    color: white;  /* Hvid tekst */
+    display: flex;
+}
+
+/* 🔳 Sidebar */
 .sidebar {
+    background: #1a1a1a; /* Mørkegrå sidebar */
+    color: white;
     width: 250px;
     height: 100vh;
-    background: white;
     padding: 20px;
     position: fixed;
     left: 0;
     top: 0;
-    border-right: 3px solid #dc3545;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.logo {
-    font-size: 22px;
+.sidebar .logo {
+    font-size: 24px;
     font-weight: bold;
+    color: #f39c12; /* Orange logo */
     margin-bottom: 20px;
-    color: #dc3545;
+    text-align: center;
 }
 
 .sidebar nav ul {
     list-style: none;
+    padding: 0;
 }
 
 .sidebar nav ul li {
     padding: 12px 0;
-    font-size: 16px;
 }
 
 .sidebar nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #333;
     font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
 .sidebar nav ul li a:hover {
-    color: #dc3545;
+    background: #f39c12;
+    color: black;
 }
 
-/* --------- Main Content Styling --------- */
+/* 🌟 Main Content */
 .content {
-    margin-left: 270px;
+    margin-left: 270px;  /* Plads til sidebar */
+    width: calc(100% - 270px);
     padding: 20px;
 }
 
+/* 📌 Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    background: #222; /* Mørk header */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
 }
 
 header h1 {
-    color: #dc3545;
+    color: #ffae00; /* Guld overskrift */
+    text-shadow: 0px 0px 10px rgba(255, 174, 0, 0.8);
+    font-size: 2rem;
 }
 
-header button {
-    background: #dc3545;
-    color: white;
+/* 🏆 Knapper */
+.btn-action {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: black;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(243, 156, 18, 0.4);
 }
 
-header button:hover {
-    background: #a71d2a;
+.btn-action:hover {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(243, 156, 18, 0.6);
 }
 
-.logout-btn {
-    background: #333;
-}
-
-/* --------- Tabel Styling --------- */
+/* 📌 Tabel */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: #222; /* Mørk tabel */
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
 }
 
 th, td {
     padding: 15px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #333; /* Mørkere linjer */
 }
 
 th {
-    background: #dc3545;
-    color: white;
-}
-
-/* Ikoner for handlinger */
-.action-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
+    background: #ffae00; /* Guld tabel-header */
+    color: black;
     font-size: 18px;
-    padding: 5px;
-    margin: 0 5px;
 }
 
-.action-btn.slet {
-    color: #dc3545;
-}
-
-.action-btn.slet:hover {
-    color: #a71d2a;
-}
-
-.action-btn.rediger {
-    color: #007bff;
-}
-
-.action-btn.rediger:hover {
-    color: #0056b3;
-}
-
-/* --------- Formular Styling --------- */
-form {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    margin: 20px auto;
-}
-
-h1 {
-    text-align: center;
-    color: #dc3545;
-}
-
-input[type="date"], input[type="time"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+td {
     font-size: 16px;
 }
 
-button {
-    background: #dc3545;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+/* 🎞️ Film-billeder */
+td img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* 🏆 Action knapper */
+.btn-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn-icon {
+    background: #444;
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+    border: none;
 }
 
-button:hover {
-    background: #a71d2a;
+.btn-icon:hover {
+    background: #f39c12;
 }
 
-/* --------- Responsivt Design --------- */
+/* 🎬 Hover-effekt på rækker */
+tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* 📌 Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: white;
+}
+
+/* 🎥 Responsive design */
 @media (max-width: 768px) {
     .sidebar {
         width: 200px;
@@ -174,50 +177,15 @@ button:hover {
 
     .content {
         margin-left: 210px;
+        width: calc(100% - 210px);
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
     }
 }
-.hidden {
-    display: none;
-}
-
-#confirmationMessage {
-    background-color: #28a745;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-/* --------- Opret ny forestilling-knap (Administrationsside) --------- */
-#btnAddShow {
-    font-size: 14px;  /* Mindre tekst */
-    padding: 6px 12px;  /* Reducer størrelse */
-    width: auto;
-    background: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px; /* Afstand mellem ikon og tekst */
-    font-weight: bold;
-}
-
-
-#btnAddShow:hover {
-    background: #a71d2a;
-}
-
-/* Styling for Show ID tekst */
-.show-id {
-    font-size: 16px;
-    font-weight: bold;
-    color: #dc3545;
-    background: #f8f8f8;
-    padding: 5px 10px;
-    display: inline-block;
-    border-radius: 5px;
-}
-

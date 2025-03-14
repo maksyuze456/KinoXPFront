@@ -1,53 +1,79 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const bookingList = document.querySelector("#bookingList");
+    const bookingModal = document.querySelector("#bookingModal");
+    const closeModal = document.querySelector("#closeModal");
+    const form = document.querySelector("#bookingForm");
 
-let heading = document.querySelector("h1");
+    // Hent bookinger fra backend
+    function fetchBookings() {
+        fetch("http://localhost:8080/booking/")
+            .then(response => response.json())
+            .then(bookings => {
+                bookingList.innerHTML = "";
+                bookings.forEach(booking => {
+                    bookingList.innerHTML += `
+                        <tr>
+                            <td>${booking.name} ${booking.lastName}</td>
+                            <td>${booking.phone}</td>
+                            <td>${booking.amount}</td>
+                            <td>${booking.show ? booking.show.film.title + " - " + booking.show.date : "Ukendt"}</td>
+                            <td>
+                                <button class="editBtn" onclick="editBooking(${booking.bookingID})">✏️</button>
+                                <button class="deleteBtn" onclick="deleteBooking(${booking.bookingID})">❌</button>
+                            </td>
+                        </tr>
+                    `;
+                });
+            });
+    }
 
-let allBookings = [];
-let form = document.querySelector("form");
-form.addEventListener('submit', fetchSubmit);
-fetch('http://localhost:8080/booking/')
-    .then(response => response.json())
-    .then(data => {
-        allBookings = data;
-        dynamicData(allBookings); 
-    })
+    // Hent shows fra backend
+    function fetchShows() {
+        fetch("http://localhost:8080/allshows/allshowsData")
+            .then(response => response.json())
+            .then(shows => {
+                const showSelect = document.getElementById("showSelect");
+                showSelect.innerHTML = shows.map(show =>
+                    `<option value="${show.showID}">${show.film.title} - ${show.date} ${show.time}</option>`
+                ).join('');
+            });
+    }
 
+    // Åbn modal for oprettelse/redigering
+    document.querySelector("#btnAddBooking").addEventListener("click", function () {
+        bookingModal.style.display = "block";
+        form.reset();
+    });
 
-async function dynamicData(allBookings) {
-    allBookings.forEach(booking => {
-        const markup = `
-            <div class="booking">
-            <div style="display: flex; gap: 0.3125rem;">
-                <img src="images/user.png" alt="user">
-                <div class="wrapper">
-                    <h4>${booking.name} ${booking.lastName}</h4>
-                    <div class="meta-data">
-                        <p>${booking.amount}</p>
-                        <p>${booking.phone}</p>
-                    </div>
-                </div>
-            </div>
-            <img id="edit" src="images/edit.png" alt="edit">
-            </div>
-        `;
-        document.querySelector(".bookings").insertAdjacentHTML('beforeend', markup);
-    })
-}
+    // Luk modal
+    closeModal.addEventListener("click", function () {
+        bookingModal.style.display = "none";
+    });
 
-function fetchSubmit(event) {
-    event.preventDefault();
-    let form = document.querySelector("form")
-    let formData = new FormData(form);
-    let data = Object.fromEntries(formData);
-    let formJson = JSON.stringify(data);
-    console.log(formJson);
-    /*fetch('http://localhost:8080/booking/create',
-        {
-            method: 'POST',
-            body: formJson,
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            }
-        }
-    )
-    */
-}
+    // Slet booking
+    function deleteBooking(id) {
+        fetch(`http://localhost:8080/booking/${id}`, { method: "DELETE" })
+            .then(() => fetchBookings());
+    }
+
+    // Håndter booking submission
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const data = {
+            name: document.querySelector("#name").value,
+            lastName: document.querySelector("#lastName").value,
+            phone: document.querySelector("#phone").value,
+            amount: document.querySelector("#amount").value,
+            showID: document.getElementById("showSelect").value
+        };
+
+        fetch("http://localhost:8080/booking/create", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        }).then(() => { bookingModal.style.display = "none"; fetchBookings(); });
+    });
+
+    fetchBookings();
+    fetchShows();
+});

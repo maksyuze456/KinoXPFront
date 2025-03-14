@@ -1,147 +1,173 @@
-/* Generel styling */
-body {
+/* 🎨 Reset styles */
+* {
     margin: 0;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    background: #f0f4f8;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 🌑 Global Styling */
+body {
+    background: #111;
+    color: white;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* 🏆 Centrering og forbedring af overskriften */
 h1 {
-    margin-bottom: 2rem;
     text-align: center;
-    font-size: 2rem;
-    color: #2d3748;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    text-shadow: 4px 4px 12px rgba(243, 156, 18, 0.7);
+    margin-bottom: 2rem;
 }
 
-/* Opret ny film-knap (øverst til venstre) */
-.create-section {
-    float: left;
-    margin-bottom: 1rem;
+/* 📌 Wrapper til søgefelt og knapper */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Afstand mellem knapper og søgefelt */
+    margin-bottom: 2rem;
 }
 
+/* 🎬 Styling af "Opret ny film"-knappen */
 .create-section button {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    padding: 14px 24px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     border: none;
-    background: #8f958f;
-    color: #fff;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0px 5px 15px rgba(243, 156, 18, 0.5);
 }
 
 .create-section button:hover {
-    background: #666866;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    transform: translateY(-3px);
+    box-shadow: 0px 7px 18px rgba(243, 156, 18, 0.8);
 }
 
-/* Søgefelt (øverst til højre) */
-.search-section {
-    float: right;
-    margin-bottom: 1rem;
-}
-
+/* 🔍 Styling af søgefelt */
 .search-section input {
-    padding: 0.6rem;
-    width: 220px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    transition: border-color 0.3s;
+    padding: 14px;
+    font-size: 18px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 300px;
+    text-align: center;
 }
 
 .search-section input:focus {
-    border-color: #d00000;
+    border-color: #f39c12;
+    box-shadow: 0px 0px 12px rgba(243, 156, 18, 0.5);
     outline: none;
 }
 
+/* 🔍 Styling af "Søg"-knappen */
 .search-section button {
-    padding: 0.6rem 1.2rem;
-    margin-left: 0.5rem;
-    border: none;
-    border-radius: 6px;
-    background: #d00000;
-    color: #fff;
+    padding: 14px 22px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    border: none;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0px 5px 15px rgba(52, 152, 219, 0.5);
 }
 
 .search-section button:hover {
-    background: #005fa3;
-    transform: translateY(-2px);
+    background: linear-gradient(135deg, #2980b9, #1c6691);
+    transform: translateY(-3px);
+    box-shadow: 0px 7px 18px rgba(52, 152, 219, 0.7);
 }
 
-/* Container til film-kort */
+/* 🎥 Film Container */
 .film-container {
-    clear: both;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
 }
 
-/* Selve film-kortet */
+/* 🎞️ Filmkort */
 .film-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 300px;
-    padding: 1rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background: #222;
+    width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 6px 18px rgba(255, 255, 255, 0.15);
 }
 
 .film-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 24px rgba(255, 255, 255, 0.2);
 }
 
 .film-card img {
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 10px;
 }
 
 .film-card h2 {
-    margin: 0.8rem 0 0.4rem;
-    font-size: 1.4rem;
-    color: #2d3748;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.6rem;
 }
 
 .film-card p {
-    margin: 0.4rem 0;
-    font-size: 1rem;
-    color: #4a5568;
+    color: #bbb;
+    font-size: 15px;
 }
 
-/* Knapper i filmkort */
+/* 🎬 Knapper i filmkort */
 .film-card button {
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    padding: 0.4rem 0.8rem;
+    background: #f39c12;
     border: none;
-    border-radius: 6px;
-    color: #fff;
+    padding: 10px 18px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
     transition: background 0.3s, transform 0.2s;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
 }
 
-.film-card button.edit-btn {
-    background: #073a6e;
+.film-card .edit-btn {
+    background: #2980b9;
 }
 
-.film-card button.edit-btn:hover {
-    background: #002244;
-    transform: scale(1.05);
+.film-card .delete-btn {
+    background: #e74c3c;
 }
 
-.film-card button.delete-btn {
-    background: #d00000;
+.film-card button:hover {
+    opacity: 0.85;
+    transform: scale(1.08);
 }
-
-.film-card button.delete-btn:hover {
-    background: #a00000;
-    transform: scale(1.05);
+/* 📌 Wrapper til søgefelt og knapper */
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Afstand mellem knapper og søgefelt */
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }

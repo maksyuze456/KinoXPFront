@@ -9,7 +9,7 @@
 /* 🌑 Global Dark Theme */
 body {
     background-color: #111;  /* Sort baggrund */
-    color: white;
+    color: white;  /* Hvid tekst */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,22 +18,21 @@ body {
 }
 
 /* 📌 Form Container */
-.form-container {
+form {
     background: #222;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    width: 450px;
+    width: 400px;
     text-align: center;
 }
 
 /* 🏆 Overskrift */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #ffae00;
-    text-shadow: 0px 0px 12px rgba(255, 174, 0, 0.8);
-    text-align: center;
+    text-shadow: 0px 0px 10px rgba(255, 174, 0, 0.8);
 }
 
 /* 📝 Labels */
@@ -42,13 +41,12 @@ label {
     display: block;
     margin: 10px 0 5px;
     color: #ccc;
-    text-align: left;
 }
 
 /* 🔳 Input Fields */
 input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #444;
     border-radius: 6px;
     background: #333;
@@ -74,42 +72,34 @@ button {
     transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-/* 🟠 Opdater film-knap */
-.btn-update {
+/* 🔄 Opdater forestilling-knap */
+#btnUpdate {
     background: linear-gradient(135deg, #f39c12, #e67e22);
     color: white;
     box-shadow: 0px 4px 10px rgba(243, 156, 18, 0.4);
-    width: 48%;
 }
 
-.btn-update:hover {
+#btnUpdate:hover {
     background: linear-gradient(135deg, #e67e22, #d35400);
     transform: translateY(-2px);
     box-shadow: 0px 6px 12px rgba(243, 156, 18, 0.6);
 }
 
-/* 🔙 Fortryd-knap */
-.btn-cancel {
+/* 🔙 Tilbage-knap */
+#btnBack {
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     box-shadow: 0px 4px 10px rgba(52, 152, 219, 0.4);
-    width: 48%;
 }
 
-.btn-cancel:hover {
+#btnBack:hover {
     background: linear-gradient(135deg, #2980b9, #1c6691);
     transform: translateY(-2px);
     box-shadow: 0px 6px 12px rgba(52, 152, 219, 0.6);
 }
 
-/* 🏗 Knap container */
-.button-container {
-    display: flex;
-    justify-content: space-between;
-}
-
 /* ✅ Bekræftelsesmeddelelse */
-.confirmation-message {
+#confirmationMessage {
     color: #2ecc71;
     font-weight: bold;
     margin-top: 15px;

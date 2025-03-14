@@ -4,36 +4,62 @@
     <meta charset="UTF-8">
     <title>Film Oversigt</title>
     <link rel="stylesheet" href="FullFilm.css">
+    <link rel="stylesheet" href="../show/style.css">
+
 </head>
 <body>
 
-<h1>Film Oversigt</h1>
+<!-- Sidebar -->
+<aside class="sidebar">
+    <div class="logo">LOGO</div>
+    <nav>
+        <ul>
+            <li><a href="../Forside/index.html">🏠 Dashboard</a></li>
+            <li><a href="../Film/FullFilm.html">🎬 Film Administration</a>
+                <ul>
+                    <li><a href="../Film/FullFilm.html">Se og administrer film</a></li>
+                    <li><a href="../Film/ADDFilm.html">Opret ny film</a></li>
+                </ul>
+            </li>
+            <li><a href="../show/index.html">🎭 Forestillings Administration</a>
+                <ul>
+                    <li><a href="../show/ListShow.html">Se og administrer forestillinger</a></li>
+                    <li><a href="../show/Create.html">Opret ny forestilling</a></li>
+                </ul>
+            </li>
+            <li><a href="../booking/index.html">📅 Booking</a>
+                <ul>
+                    <li><a href="../booking/ListBookings.html">Se og administrer bookinger</a></li>
+                    <li><a href="../booking/CreateBooking.html">Opret ny booking</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
 
+<!-- Main Content -->
+<main class="content">
+    <h1>Film Oversigt</h1>
 
-<div class="create-section">
-    <button onclick="location.href='AddFilm.html'">Opret ny Film</button>
-</div>
-
-
-<div class="search-section">
-    <input type="text" id="searchInput" placeholder="Indtast søgeord...">
-    <button onclick="filterFilms()">Søg</button>
-</div>
-
-
-<div id="filmContainer" class="film-container">
-
-    <div class="film-card">
-        <img src="example.jpg" alt="Film Titel">
-        <h2>Film Titel</h2>
-        <p>Beskrivelse af filmen...</p>
-        <button class="edit-btn">Rediger</button>
-        <button class="delete-btn">Slet</button>
+    <div class="create-section">
+        <button onclick="location.href='AddFilm.html'">Opret ny Film</button>
     </div>
 
+    <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Indtast søgeord...">
+        <button onclick="filterFilms()">Søg</button>
+    </div>
 
-</div>
-
+    <div id="filmContainer" class="film-container">
+        <div class="film-card">
+            <img src="example.jpg" alt="Film Titel">
+            <h2>Film Titel</h2>
+            <p>Beskrivelse af filmen...</p>
+            <button class="edit-btn">Rediger</button>
+            <button class="delete-btn">Slet</button>
+        </div>
+    </div>
+</main>
 
 <script src="FullFilm.js"></script>
 

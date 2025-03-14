@@ -6,49 +6,47 @@
     font-family: 'Arial', sans-serif;
 }
 
-/* 🌑 Global Dark Theme */
+/* 🌑 Generelt layout */
 body {
-    background-color: #111;  /* Sort baggrund */
+    background-color: #111;
     color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
-/* 📌 Form Container */
+/* 📌 Formular container */
 .form-container {
     background: #222;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    width: 450px;
-    text-align: center;
+    width: 500px;
 }
 
 /* 🏆 Overskrift */
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffae00;
-    text-shadow: 0px 0px 12px rgba(255, 174, 0, 0.8);
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+    text-shadow: 0px 0px 10px rgba(243, 156, 18, 0.6);
 }
 
-/* 📝 Labels */
+/* 📝 Label styling */
 label {
     font-weight: bold;
     display: block;
     margin: 10px 0 5px;
     color: #ccc;
-    text-align: left;
 }
 
-/* 🔳 Input Fields */
+/* 🔳 Inputfelter */
 input {
     width: 100%;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #444;
     border-radius: 6px;
     background: #333;
@@ -64,7 +62,7 @@ input:focus {
 
 /* 🎬 Knapper */
 button {
-    padding: 12px 18px;
+    padding: 10px 15px;
     margin-top: 15px;
     border: none;
     font-size: 16px;
@@ -74,15 +72,14 @@ button {
     transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
 }
 
-/* 🟠 Opdater film-knap */
-.btn-update {
+/* 🟠 Tilføj film-knap */
+.btn-add {
     background: linear-gradient(135deg, #f39c12, #e67e22);
     color: white;
     box-shadow: 0px 4px 10px rgba(243, 156, 18, 0.4);
-    width: 48%;
 }
 
-.btn-update:hover {
+.btn-add:hover {
     background: linear-gradient(135deg, #e67e22, #d35400);
     transform: translateY(-2px);
     box-shadow: 0px 6px 12px rgba(243, 156, 18, 0.6);
@@ -93,7 +90,6 @@ button {
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     box-shadow: 0px 4px 10px rgba(52, 152, 219, 0.4);
-    width: 48%;
 }
 
 .btn-cancel:hover {
@@ -106,15 +102,4 @@ button {
 .button-container {
     display: flex;
     justify-content: space-between;
-}
-
-/* ✅ Bekræftelsesmeddelelse */
-.confirmation-message {
-    color: #2ecc71;
-    font-weight: bold;
-    margin-top: 15px;
-    display: none;
-    padding: 10px;
-    border-radius: 5px;
-    background: rgba(46, 204, 113, 0.2);
 }

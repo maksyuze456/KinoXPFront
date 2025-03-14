@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opret Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="createBooking.js"></script>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="logo">🎬 KinoXP</div>
+    <nav>
+        <ul>
+            <li><a href="../Forside/index.html">🏠 Dashboard</a></li>
+            <li><a href="../Film/FullFilm.html">🎬 Film Administration</a></li>
+            <li><a href="../show/index.html">🎭 Forestillings Administration</a></li>
+            <li><a href="../booking/index.html">📅 Booking</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+    <header>
+        <h1>Opret en Booking</h1>
+    </header>
+
+    <section class="form-container">
+        <h2>Udfyld booking detaljer</h2>
+        <form id="bookingForm">
+            <label for="name">Fornavn:</label>
+            <input type="text" id="name" required>
+
+            <label for="lastName">Efternavn:</label>
+            <input type="text" id="lastName" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="text" id="phone" required>
+
+            <label for="amount">Antal billetter:</label>
+            <input type="number" id="amount" required>
+
+            <label for="showSelect">Vælg en forestilling:</label>
+            <select id="showSelect" required></select>
+
+            <button type="submit">Opret Booking</button>
+        </form>
+        <p id="confirmationMessage" class="hidden">✅ Din booking er blevet oprettet!</p>
+    </section>
+</main>
+
+</body>
+</html>

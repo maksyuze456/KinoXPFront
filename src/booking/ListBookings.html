@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Administration</title>
+    <title>Se og Administrer Bookinger</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="main.js"></script>
+    <script defer src="listBookings.js"></script>
 </head>
 <body>
 
@@ -41,7 +41,7 @@
 <main class="content">
     <header>
         <h1>Booking Administration</h1>
-        <button id="btnAddBooking">+ Opret ny booking</button>
+        <button id="btnAddBooking" onclick="window.location.href='CreateBooking.html'">+ Opret ny booking</button>
     </header>
 
     <!-- Tabel over bookinger -->
@@ -55,39 +55,11 @@
             <th>Handling</th>
         </tr>
         </thead>
-        <tbody id="booking">
+        <tbody id="bookingList">
         <!-- Bookinger vil blive tilføjet her med JavaScript -->
         </tbody>
     </table>
 </main>
-
-<!-- Modal for oprettelse/redigering af booking -->
-<div id="bookingModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2 id="modalTitle">Opret Booking</h2>
-        <form id="bookingForm">
-            <input type="hidden" id="bookingId">
-
-            <label for="name">Fornavn:</label>
-            <input type="text" id="name" required>
-
-            <label for="lastName">Efternavn:</label>
-            <input type="text" id="lastName" required>
-
-            <label for="phone">Telefon:</label>
-            <input type="text" id="phone" required>
-
-            <label for="amount">Antal billetter:</label>
-            <input type="number" id="amount" required>
-
-            <label for="showSelect">Vælg en forestilling:</label>
-            <select id="showSelect" required></select>
-
-            <button type="submit">Gem Booking</button>
-        </form>
-    </div>
-</div>
 
 </body>
 </html>
